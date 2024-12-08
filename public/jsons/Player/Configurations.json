@@ -1,0 +1,62 @@
+{
+  "Thirst": {
+    "Levels_Property": {
+      "Idle": 1,
+      "Walk": 6,
+      "Sneaking": 3,
+      "Jumping": 5,
+      "Running": 8
+    },
+
+    "Max_Value": 100,
+    "Max_Saturation": 5,
+    "Tick_In_Seconds": 125
+  },
+
+  "Hunger": {
+    "Levels_Property": {
+      "Idle": 1,
+      "Walk": 6,
+      "Sneaking": 3,
+      "Jumping": 5,
+      "Running": 8
+    },
+
+    "Max_Value": 100,
+    "Max_Saturation": 5,
+    "Tick_In_Seconds": 175
+  },
+
+  "Stamina": {
+    "Levels_Property": {
+      "Jumping": 2,
+      "Running": 1
+    },
+
+    "Max_Value": 100,
+    "Regen_Cooldown": 10,
+
+    "Min_Exhausted": 10,
+    "Regen_Exhausted_Cooldown": 20,
+
+    "Exhaustion": true,
+    "Regen_In_Seconds": 1
+  },
+
+  "Health": {
+    "Property": {
+      "Right_Footer": 10,
+      "Left_Footer": 10,
+      "Right_Leg": 15,
+      "Left_Leg": 15,
+      "Right_Arm": 10,
+      "Left_Arm": 10,
+      "Torso": 20,
+      "Head": 10
+    }
+  },
+
+  "General": {
+    "Supportable_Weight": 20
+  }
+}
