@@ -61,40 +61,24 @@ module.exports = {
         "shadow-nexus-s10": "0px 0px 15px 0px rgba(0, 0, 0, 0.5)",
       },
       animation: {
+        newsping: "newsping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
         sobd: "sobedesce 60s ease infinite",
         dess: "descesobe 60s ease infinite",
-        "helice-rotate": "helice_rotate 0.013s linear infinite",
-
-        "heli-descesobe": "heli_descesobe 20s ease infinite",
-        "heli-sobedesce": "heli_sobedesce 20s ease infinite",
       },
       keyframes: {
+        newsping: {
+          "75%, 100%": {
+            transform: "scale(1.25)",
+            opacity: "0",
+          },
+        },
         sobedesce: {
-          "50%": { transform: "translateY(20%)" },
-          "0%, 100%": { transform: "translateY(0%)" },
+          "50%": { transform: "translateY(5%)" },
+          "0%, 100%": { transform: "translateY(-5%)" },
         },
         descesobe: {
           "0%, 100%": { transform: "translateY(20%)" },
           "50%": { transform: "translateY(0%)" },
-        },
-        heli_descesobe: {
-          "0%": { transform: "translateY(0%) translateX(0%)" },
-          "25%": { transform: "translateY(-30%) translateX(-10%)" },
-          "50%": { transform: "translateY(-10%) translateX(10%)" },
-          "75%": { transform: "translateY(20%) translateX(30%)" },
-          "100%": { transform: "translateY(0%) translateX(0%)" },
-        },
-
-        heli_sobedesce: {
-          "100%": { transform: "translateY(0%) translateX(0%)" },
-          "75%": { transform: "translateY(-30%) translateX(-10%)" },
-          "50%": { transform: "translateY(-10%) translateX(10%)" },
-          "25%": { transform: "translateY(20%) translateX(30%)" },
-          "0%": { transform: "translateY(0%) translateX(0%)" },
-        },
-        helice_rotate: {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
         },
       },
     },

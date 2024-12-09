@@ -1,12 +1,11 @@
-import Overlay from "@/Components/Overlay";
-import Icons from "@/Containers/Icons";
 import Image from "next/image";
-export default function Home() {
+
+export default function Home({ ffes }) {
   return (
-    <div className="text-nexus-txt-50 w-screen h-screen">
-      <div className="w-full h-full flex items-center justify-center">
-        <div className="size-[200px] border-nexus-primary-color/20 border-[5px] rounded-full absolute"></div>
-        <div className="size-[250px] border-nexus-txt-50/20 border-[8px] rounded-full absolute"></div>
+    <div className="text-nexus-txt-50 w-screen h-screen overflow-hidden">
+      <div className="w-full h-full flex items-center justify-center animate-sobd">
+        <div className="size-[200px] bg-gradient-to-t from-nexus-primary-color/20 border-nexus-primary-color/75 border-[5px] box-border rounded-full absolute animate-spin"></div>
+        <div className="size-[250px] from-nexus-txt-50/20 border-nexus-txt-50/75 border-[2px] box-border rounded-full absolute animate-newsping"></div>
         <div className="size-[250px] rounded-full absolute grid place-items-center">
           <Image
             src="/images/nx.png"
@@ -16,8 +15,10 @@ export default function Home() {
             className=""
           ></Image>
         </div>
+      </div>
+      <div className="absolute top-0 left-0 w-screen h-screen flex items-center justify-center">
         <h1 className="text-4xl font-semibold text-nexus-txt-100 first-letter:text-nexus-primary-color absolute m-10 text-center top-10">
-          Site apenas para salvar arquivos JSON
+          Hospedando Arquivos necessario para o Nexus TK
         </h1>
       </div>
     </div>

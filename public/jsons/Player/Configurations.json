@@ -34,9 +34,9 @@
     },
 
     "Max_Value": 100,
-    "Regen_Cooldown": 10,
+    "Regen_Value": 1,
 
-    "Min_Exhausted": 10,
+    "Min_Exhausted": 20,
     "Regen_Exhausted_Cooldown": 20,
 
     "Exhaustion": true,

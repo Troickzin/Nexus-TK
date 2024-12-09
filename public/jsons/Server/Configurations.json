@@ -1,1 +1,22 @@
-{}
+{
+  "Interface": {
+    "Overlay": {
+      "Hud": {
+        "Thirst": {
+          "Danger_Percentage": 20
+        },
+        "Hunger": {
+          "Danger_Percentage": 20
+        },
+        "Health": {
+          "Danger_Percentage": 20
+        },
+        "Stamina": {
+          "Danger_Percentage": 20,
+          "Opacity_Timer": 60,
+          "Always_Visible": false
+        }
+      }
+    }
+  }
+}
