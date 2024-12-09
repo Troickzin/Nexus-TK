@@ -1,11 +1,11 @@
 {
   "canned_food:canned_corn_opened": {
     "Thirst_Property": {
-      "Value": 1.0,
+      "Value": 1,
       "Saturation": 0.1
     },
     "Hunger_Property": {
-      "Value": 6.0,
+      "Value": 6,
       "Saturation": 0.25
     },
     "Type": "Food",
@@ -13,11 +13,11 @@
   },
   "canned_food:canned_beans_opened": {
     "Thirst_Property": {
-      "Value": 1.0,
+      "Value": 1,
       "Saturation": 0.1
     },
     "Hunger_Property": {
-      "Value": 10.0,
+      "Value": 10,
       "Saturation": 0.5
     },
     "Type": "Food",
