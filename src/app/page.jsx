@@ -26,6 +26,52 @@ export default function Home({ ffes }) {
           </span>
         </h1>
       </div>
+      <div className="absolute max-xl:bottom-0 xl:top-0 xl:right-0 w-screen xl:w-auto xl:h-screen flex xl:grid items-center justify-center">
+        <div className="overflow-x-auto snap-x max-sm:gap-16 flex xl:grid gap-5 max-xl:mt-20 max-xl:mb-5 xl:ml-20 xl:mr-20 max-xl:pt-4 max-xl:pl-8 max-xl:pr-8 xl:pl-4 xl:pt-8 xl:pb-8 max-xl:border-t-2 xl:border-l-2 border-nexus-txt-400">
+          <div className="snap-center">
+            <p className="text-nexus-txt-50">Packs</p>
+            <ul className="ml-4 mt-2 text-nexus-txt-100">
+              <li>
+                <p>Minecraft</p>
+                <ul className="ml-4 mt-2 text-nexus-primary-color">
+                  <li>
+                    <a href="jsons/Packs/Minecraft/Consumables.json">
+                      Consumables
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <p>Canned Food</p>
+                <ul className="ml-4 mt-2 text-nexus-primary-color">
+                  <li>
+                    <a href="jsons/Packs/Canned_Food/Consumables.json">
+                      Consumables
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div className="snap-center">
+            <p className="text-nexus-txt-50">Player</p>
+            <ul className="ml-4 mt-2 text-nexus-primary-color">
+              <li>
+                <a href="jsons/Player/Configurations.json">Configurations</a>
+              </li>
+            </ul>
+          </div>
+          <div className="snap-center">
+            <p className="text-nexus-txt-50">Server</p>
+            <ul className="ml-4 mt-2 text-nexus-primary-color">
+              <li>
+                <a href="jsons/Server/Configurations.json">Configurations</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
