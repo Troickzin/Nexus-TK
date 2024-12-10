@@ -18,7 +18,7 @@ export default function Home({ ffes }) {
       </div>
       <div className="absolute top-0 left-0 w-screen h-screen flex items-center justify-center">
         <h1 className="text-4xl max-md:text-2xl font-semibold text-nexus-txt-100 first-letter:text-nexus-primary-color absolute m-10 text-center top-10">
-          Hospedando Arquivos necessario para o <br />
+          Hospedando arquivos necessario para o <br />
           <span className="text-nexus-txt-50 text-5xl max-md:text-3xl">
             <span className="text-nexus-primary-color ">N</span>
             EXUS &nbsp;

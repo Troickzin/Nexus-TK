@@ -29,18 +29,15 @@
 
   "Stamina": {
     "Levels_Property": {
-      "Jumping": 2,
-      "Running": 1
+      "Jumping": 0.5,
+      "Running": 0.25
     },
 
     "Max_Value": 100,
-    "Regen_Value": 1,
+    "Regen_Value": 0.25,
 
     "Min_Exhausted": 20,
-    "Regen_Exhausted_Cooldown": 20,
-
-    "Exhaustion": true,
-    "Regen_In_Seconds": 1
+    "Regen_Exhausted_Cooldown": 20
   },
 
   "Health": {

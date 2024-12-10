@@ -13,7 +13,7 @@
         },
         "Stamina": {
           "Danger_Percentage": 20,
-          "Opacity_Timer": 60,
+          "Opacity_Timer": 20,
           "Always_Visible": false
         }
       }
