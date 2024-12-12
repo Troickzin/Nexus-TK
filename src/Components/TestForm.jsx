@@ -4,13 +4,19 @@ import { faL } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 async function uploadFiles(arquivo) {
-  console.log("Arquivo: ", arquivo);
+  let formData = new FormData();
+  formData.append("file", arquivo);
+  formData.append("name", arquivo.name);
 
-  Api.post("/api/test", {
-    arquivo,
+  console.log(formData.get("file"));
+
+  Api.post("/api/test", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
   })
     .then(function (res) {
-      console.log("Vindo do Back: ", JSON.stringify(res.data));
+      // console.log("Vindo do Back: ", JSON.stringify(res.data));
     })
     .catch((error) => {
       console.log(error.message);
@@ -18,10 +24,10 @@ async function uploadFiles(arquivo) {
 }
 
 function ChooseFile(e, setInputTitle, inputTitle) {
-  const fileUp = document.getElementById("fileUp");
   const uploadButton = document.getElementById("upload_button");
+  const fileUp = document.getElementById("fileUp");
 
-  const fileName = fileUp.value.substring(12);
+  const fileName = fileUp.files[0].name;
 
   setInputTitle(fileName);
 }
@@ -32,8 +38,10 @@ function UpForm(e, action) {
   testForm.dataset.open = action;
 }
 
-function HandleUpload(e, setInputTitle) {
+function HandleUpload(e) {
+  const fileUp = document.getElementById("fileUp");
   e.preventDefault();
+  uploadFiles(fileUp.files[0]);
 }
 export default function TestForm() {
   const [inputTitle, setInputTitle] = useState("");
@@ -61,7 +69,7 @@ export default function TestForm() {
             X
           </button>
           <h1 className="text-center text-2xl text-nexus-txt-50 mb-5">
-            Test Form
+            Upload File
           </h1>
           <label
             htmlFor="fileUp"
@@ -74,14 +82,14 @@ export default function TestForm() {
             type="file"
             name="file"
             id="fileUp"
-            accept=".json,application/json"
+            // accept="application/json"
             className="hidden"
             onChange={(e) => ChooseFile(e, setInputTitle, inputTitle)}
           />
           <button
             id="upload_button"
             className="btn btn-outline border-nexus-txt-50 text-nexus-txt-50 hover:bg-nexus-primary-color hover:border-nexus-primary-color pl-20 pr-20 ml-20 mr-20 shadow-black/50 shadow-lg"
-            onClick={(e) => console.log("test")}
+            onClick={(e) => HandleUpload(e)}
           >
             Upload
           </button>

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import TestForm from "@/Components/TestForm";
+import { signOut } from "next-auth/react";
+import DeslogarButton from "@/Components/DeslogarButton";
 
-export default async function Home({ ffes }) {
+export default async function Home() {
   return (
     <div className="text-nexus-txt-50 w-screen h-screen overflow-hidden">
       <div className="w-full h-full flex items-center justify-center animate-sobd">
@@ -71,6 +73,7 @@ export default async function Home({ ffes }) {
             </ul>
           </div>
         </div>
+        <DeslogarButton />
       </div>
       {/* <TestForm></TestForm> */}
     </div>

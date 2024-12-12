@@ -1,0 +1,391 @@
+{
+  "minecraft:apple": {
+    "Thirst_Property": {
+      "Value": 2,
+      "Saturation": 0.1
+    },
+    "Hunger_Property": {
+      "Value": 4,
+      "Saturation": 0.2
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:golden_apple": {
+    "Thirst_Property": {
+      "Value": 2,
+      "Saturation": 0.1
+    },
+    "Hunger_Property": {
+      "Value": 4,
+      "Saturation": 0.2
+    },
+    "Healing_Property": {
+      "Healing": 5
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:enchanted_golden_apple": {
+    "Thirst_Property": {
+      "Value": 2,
+      "Saturation": 0.1
+    },
+    "Hunger_Property": {
+      "Value": 4,
+      "Saturation": 0.2
+    },
+    "Healing_Property": {
+      "Healing": 10
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:mushroom_stew": {
+    "Thirst_Property": {
+      "Value": 5,
+      "Saturation": 0.25
+    },
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.25
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:suspicious_stew": {
+    "Thirst_Property": {
+      "Value": 5,
+      "Saturation": 0.25
+    },
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.25
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:rabbit_stew": {
+    "Thirst_Property": {
+      "Value": 5,
+      "Saturation": 0.25
+    },
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.25
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:beetroot_soup": {
+    "Thirst_Property": {
+      "Value": 5,
+      "Saturation": 0.25
+    },
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.25
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:carrot": {
+    "Hunger_Property": {
+      "Value": 3,
+      "Saturation": 0.25
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:potato": {
+    "Hunger_Property": {
+      "Value": 5,
+      "Saturation": 0.25
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:baked_potato"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:baked_potato": {
+    "Hunger_Property": {
+      "Value": 8,
+      "Saturation": 0.5
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:poisonous_potato": {
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.02
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:pumpkin_pie": {
+    "Hunger_Property": {
+      "Value": 8,
+      "Saturation": 0.5
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:golden_carrot": {
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:bread": {
+    "Hunger_Property": {
+      "Value": 5,
+      "Saturation": 0.2
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:dried_kelp": {
+    "Hunger_Property": {
+      "Value": 1,
+      "Saturation": 0.05
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cookie": {
+    "Hunger_Property": {
+      "Value": 3,
+      "Saturation": 0.15
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:melon_slice": {
+    "Thirst_Property": {
+      "Value": 4,
+      "Saturation": 0.25
+    },
+    "Hunger_Property": {
+      "Value": 3,
+      "Saturation": 0.15
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:sweet_berries": {
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.15
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:glow_berries": {
+    "Hunger_Property": {
+      "Value": 1,
+      "Saturation": 0.05
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cod": {
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.15
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_cod"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:salmon": {
+    "Hunger_Property": {
+      "Value": 3,
+      "Saturation": 0.15
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_salmon"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:tropical_fish": {
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.15
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_cod"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:pufferfish": {
+    "Hunger_Property": {
+      "Value": 1,
+      "Saturation": 0.15
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cooked_cod": {
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cooked_salmon": {
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:porkchop": {
+    "Hunger_Property": {
+      "Value": 3,
+      "Saturation": 0.2
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_porkchop"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cooked_porkchop": {
+    "Hunger_Property": {
+      "Value": 8,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:beef": {
+    "Hunger_Property": {
+      "Value": 4,
+      "Saturation": 0.2
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_beef"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cooked_beef": {
+    "Hunger_Property": {
+      "Value": 10,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:chicken": {
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.2
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_chicken"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cooked_chicken": {
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:rabbit": {
+    "Hunger_Property": {
+      "Value": 3,
+      "Saturation": 0.2
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_rabbit"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cooked_rabbit": {
+    "Hunger_Property": {
+      "Value": 5,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:mutton": {
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.2
+    },
+    "Convert_Property": {
+      "Cooked": "minecraft:cooked_mutton"
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:cooked_mutton": {
+    "Hunger_Property": {
+      "Value": 6,
+      "Saturation": 0.35
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:rotten_flesh": {
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.05
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:chorus_fruit": {
+    "Hunger_Property": {
+      "Value": 4,
+      "Saturation": 0.2
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:beetroot": {
+    "Hunger_Property": {
+      "Value": 1,
+      "Saturation": 0.05
+    },
+    "Type": "Food",
+    "Weight": 0.62
+  },
+  "minecraft:potion": {
+    "Thirst_Property": {
+      "Value": 10,
+      "Saturation": 0.5
+    },
+    "Type": "Drink",
+    "Weight": 0.62
+  },
+  "minecraft:honey_bottle": {
+    "Thirst_Property": {
+      "Value": 6,
+      "Saturation": 0.25
+    },
+    "Hunger_Property": {
+      "Value": 2,
+      "Saturation": 0.1
+    },
+    "Type": "Drink",
+    "Weight": 0.62
+  }
+}
