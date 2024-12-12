@@ -1,6 +1,7 @@
 import Image from "next/image";
+import TestForm from "@/Components/TestForm";
 
-export default function Home({ ffes }) {
+export default async function Home({ ffes }) {
   return (
     <div className="text-nexus-txt-50 w-screen h-screen overflow-hidden">
       <div className="w-full h-full flex items-center justify-center animate-sobd">
@@ -71,6 +72,7 @@ export default function Home({ ffes }) {
           </div>
         </div>
       </div>
+      <TestForm></TestForm>
     </div>
   );
 }
