@@ -37,13 +37,12 @@ function HandleUpload(e, setInputTitle) {
 }
 export default function TestForm() {
   const [inputTitle, setInputTitle] = useState("");
-  const testForm = document.querySelector("#testForm");
 
   return (
     <>
       <div className="absolute top-0 left-0 w-screen justify-center items-center grid">
         <button
-          className="text-center bg-nexus-bg-200 p-2 pl-10 pr-10 rounded-b-2xl hover:scale-110 transition-all border-nexus-primary-color hover:border-[1px] hover:border-t-0"
+          className="text-center bg-nexus-bg-200 p-2 pl-10 pr-10 rounded-b-2xl hover:scale-110 transition-all border-nexus-primary-color hover:border-[1px] hover:border-t-0 max-xl:hidden"
           onClick={(e) => UpForm(e, "true")}
         >
           Open Upload File
@@ -51,7 +50,7 @@ export default function TestForm() {
       </div>
       <div
         id="testForm"
-        className="w-screen h-screen absolute top-0 left-0 grid justify-center items-center bg-nexus-bg-600/80 backdrop-blur-md data-[open=false]:hidden"
+        className="w-screen h-screen absolute top-0 left-0 grid justify-center items-center bg-nexus-bg-600/80 backdrop-blur-md data-[open=false]:hidden max-xl:hidden"
         data-open="false"
       >
         <div className="relative top-0 left-0 grid rounded-3xl bg-nexus-bg-400 shadow-black/25 shadow-lg p-5 justify-items-center">
