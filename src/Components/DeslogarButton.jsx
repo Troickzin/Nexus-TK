@@ -2,6 +2,7 @@
 
 import { getSession, signIn, signOut } from "next-auth/react";
 import { useEffect, useState } from "react";
+import { PiSignOut, PiSignIn } from "react-icons/pi";
 
 export default function DeslogarButton() {
   const [session, setSession] = useState(null);
@@ -20,6 +21,7 @@ export default function DeslogarButton() {
             onClick={() => signOut()}
             className="btn btn-outline p-2 pl-5 pr-5"
           >
+            <PiSignOut />
             Deslogar
           </button>
         ) : (
@@ -27,6 +29,7 @@ export default function DeslogarButton() {
             onClick={() => signIn("google", { callbackUrl: "/" })}
             className="btn btn-outline p-2 pl-5 pr-5"
           >
+            <PiSignIn />
             Logar
           </button>
         )}

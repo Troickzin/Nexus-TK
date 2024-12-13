@@ -1,0 +1,108 @@
+{
+  "Player": {
+    "Thirst_Configurations": {
+      "Levels_Property": {
+        "Idle": "Tipo: Numero | Exemplo : 1",
+        "Sneaking": "Tipo: Numero | Exemplo : 3",
+        "Jumping": "Tipo: Numero | Exemplo : 5",
+        "Walk": "Tipo: Numero | Exemplo : 6",
+        "Running": "Tipo: Numero | Exemplo : 8",
+        "Default_Negative_Effect": "Tipo: Numero | Exemplo : 10"
+      },
+
+      "Max": "Tipo: Numero | Exemplo : 100",
+      "Max_Saturation": "Tipo: Numero | Exemplo : 5",
+      "Tick_In_Seconds": "Tipo: Numero | Exemplo : 125"
+    },
+
+    "Hunger_Configurations": {
+      "Levels_Property": {
+        "Idle": "Tipo: Numero | Exemplo : 1",
+        "Sneaking": "Tipo: Numero | Exemplo : 3",
+        "Jumping": "Tipo: Numero | Exemplo : 5",
+        "Walk": "Tipo: Numero | Exemplo : 6",
+        "Running": "Tipo: Numero | Exemplo : 8",
+        "Default_Negative_Effect": "Tipo: Numero | Exemplo : 10"
+      },
+
+      "Max": "Tipo: Numero | Exemplo : 100",
+      "Max_Saturation": "Tipo: Numero | Exemplo : 5",
+      "Tick_In_Seconds": "Tipo: Numero | Exemplo : 125"
+    },
+
+    "Stamina_Configurations": {
+      "Levels_Property": {
+        "Jumping": "Tipo: Numero | Exemplo : 3",
+        "Running": "Tipo: Numero | Exemplo : 5",
+        "Default_Negative_Effect": "Tipo: Numero | Exemplo : 10",
+        "Default_Positive_Effect": "Tipo: Numero | Exemplo : 10"
+      },
+
+      "Max": "Tipo: Numero | Exemplo : 100",
+      "Min_Exhausted": "Tipo: Numero | Exemplo : 10",
+      "Regen_In_Seconds": "Tipo: Numero | Exemplo : 1",
+      "Regen_Timer": "Tipo: Numero | Exemplo : 10 | Detalhes : Tempo que leva para comecar a regenerar apos correr ou pular",
+      "Regen_Exhausted_Timer": "Tipo: Numero | Exemplo : 20 | Detalhes : Tempo que leva para comecar a regenerar apos ficar exausto"
+    },
+
+    "Health_Property": {
+      "Right_Footer": "Tipo: Numero | Exemplo : 10",
+      "Left_Footer": "Tipo: Numero | Exemplo : 10",
+      "Right_Leg": "Tipo: Numero | Exemplo : 15",
+      "Left_Leg": "Tipo: Numero | Exemplo : 15",
+      "Right_Arm": "Tipo: Numero | Exemplo : 10",
+      "Left_Arm": "Tipo: Numero | Exemplo : 10",
+      "Torso": "Tipo: Numero | Exemplo : 20",
+      "Head": "Tipo: Numero | Exemplo : 10"
+    },
+
+    "Supportable_Weight": "Tipo: Numero | Exemplo : 20 | Detalhes : Peso maximo que o player pode carregar no inventario"
+  },
+
+  "Items": {
+    "modid:item": {
+      "Thirst_Property": {
+        "Value": "Tipo: Numero | Exemplo : 10",
+        "Saturation": "Tipo: Numero | Exemplo : 0.1"
+      },
+
+      "Hunger_Property": {
+        "Value": "Tipo: Numero | Exemplo : 10",
+        "Saturation": "Tipo: Numero | Exemplo : 0.1"
+      },
+
+      "Rotten_Property": {
+        "Days_To_Rotten": "Tipo: Numero | Exemplo : 10"
+      },
+
+      "Convert_Property": {
+        "Cooked": "Tipo: String | Exemplo : modid:item",
+        "Rotten": "Tipo: String | Exemplo : modid:item"
+      },
+
+      "Healing_Property": {
+        "Healing": "Tipo: Numero | Exemplo : 10"
+      },
+
+      "Type": "Tipo: String | Exemplo : Drink | Detalhes : Define o tipo do item, [Drink, Food, Healing]",
+      "Weight": "Tipo: Numero | Exemplo : 2.5"
+    }
+  },
+
+  "Server": {
+    "Temperature_Property": {}
+  },
+
+  "Pack_Extensions": {
+    "Minecraft": {
+      "Additions": ["Items"],
+      "Description": "Vanilla Items",
+      "Version": "1.20.1"
+    },
+    "TK Food": {
+      "Additions": ["Items"],
+      "Description": "Vanilla Items",
+      "Version": "1.20.1"
+    }
+  }
+}

@@ -4,8 +4,12 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/*.{js,ts,jsx,tsx,mdx}",
     "./src/Containers/**/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Containers/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Containers/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -87,7 +91,5 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
-  daisyui: {
-    themes: ["dark", "cupcake"],
-  },
+  daisyui: {},
 };
