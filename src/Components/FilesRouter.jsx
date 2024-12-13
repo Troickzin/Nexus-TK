@@ -1,5 +1,5 @@
 "use client";
-import { Api } from "@/Services/Axios";
+import { Api } from "@/services/Axios";
 import { useEffect, useState } from "react";
 
 async function fetchFiles() {

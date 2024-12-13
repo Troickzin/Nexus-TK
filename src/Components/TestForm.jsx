@@ -1,5 +1,5 @@
 "use client";
-import { Api } from "@/Services/Axios";
+import { Api } from "@/services/Axios";
 import { faL } from "@fortawesome/free-solid-svg-icons";
 import { getSession } from "next-auth/react";
 import { getURL } from "next/dist/shared/lib/utils";

@@ -1,8 +1,8 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Image from "next/image";
-import Profile from "@/Components/Profile";
-import TestForm from "@/Components/TestForm";
+import Profile from "@/components/Profile";
+import TestForm from "@/components/TestForm";
 
 export default async function page() {
   const session = await getServerSession();
