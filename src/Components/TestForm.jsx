@@ -1,14 +1,21 @@
 "use client";
 import { Api } from "@/Services/Axios";
 import { faL } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { getSession } from "next-auth/react";
+import { getURL } from "next/dist/shared/lib/utils";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 
 async function uploadFiles(arquivo) {
   let formData = new FormData();
-  formData.append("file", arquivo);
-  formData.append("name", arquivo.name);
 
-  console.log(formData.get("file"));
+  const session = await getSession();
+
+  formData.append("file", arquivo.fileup.files[0]);
+  formData.append("name", arquivo.namefile.value);
+  formData.append("packname", arquivo.packnamefile.value);
+  formData.append("description", arquivo.descriptionfile.value);
+  formData.append("owner", JSON.stringify(session.user));
 
   Api.post("/api/test", formData, {
     headers: {
@@ -16,26 +23,11 @@ async function uploadFiles(arquivo) {
     },
   })
     .then(function (res) {
-      // console.log("Vindo do Back: ", JSON.stringify(res.data));
+      console.log(res);
     })
     .catch((error) => {
-      console.log(error.message);
+      console.log(`Erro: ${error.status} : ${error.response.data.error}`);
     });
-}
-
-function ChooseFile(e, setInputTitle, inputTitle) {
-  const uploadButton = document.getElementById("upload_button");
-  const fileUp = document.getElementById("fileUp");
-
-  const fileName = fileUp.files[0].name;
-
-  setInputTitle(fileName);
-}
-
-function UpForm(e, action) {
-  const testForm = document.getElementById("testForm");
-
-  testForm.dataset.open = action;
 }
 
 function HandleUpload(e) {
@@ -43,57 +35,105 @@ function HandleUpload(e) {
   e.preventDefault();
   uploadFiles(fileUp.files[0]);
 }
+
+async function setname() {
+  const session = await getSession();
+  return session.user.name;
+}
+
 export default function TestForm() {
-  const [inputTitle, setInputTitle] = useState("");
+  const [fileTitle, setFileTitle] = useState("File Name");
+  const [userName, setUserName] = useState("username");
+  const [fileName, setFileName] = useState("File");
+  const [packFileName, setPackFileName] = useState("PackName");
+
+  useEffect(() => {
+    setname().then((res) => {
+      setUserName(res);
+    });
+  }, []);
+
+  const ur = `${window.location.protocol}//${window.location.host}/Jsons/Uploads/${userName}`;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.elements);
+    uploadFiles(e.target.elements);
+  };
+
+  function ChooseFile(e, file) {
+    const fileName = file.name;
+
+    setFileTitle(fileName);
+  }
+
+  function ChooseFileName(e, name) {
+    setFileName(name);
+  }
+
+  function ChoosePackFileName(e, name) {
+    setPackFileName(name);
+  }
 
   return (
     <>
-      <div className="absolute top-0 left-0 w-screen justify-center items-center grid">
-        <button
-          className="text-center bg-nexus-bg-200 p-2 pl-10 pr-10 rounded-b-2xl hover:scale-110 transition-all border-nexus-primary-color hover:border-[1px] hover:border-t-0 max-xl:hidden"
-          onClick={(e) => UpForm(e, "true")}
+      <div className="grid h-screen items-center justify-center absolute top-0 left-0 ml-20">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-nexus-bg-300 text-nexus-txt-100 font-normal"
         >
-          Open Upload File
-        </button>
-      </div>
-      <div
-        id="testForm"
-        className="w-screen h-screen absolute top-0 left-0 grid justify-center items-center bg-nexus-bg-600/80 backdrop-blur-md data-[open=false]:hidden max-xl:hidden"
-        data-open="false"
-      >
-        <div className="relative top-0 left-0 grid rounded-3xl bg-nexus-bg-400 shadow-black/25 shadow-lg p-5 justify-items-center">
-          <button
-            className="absolute top-0 right-0 text-nexus-txt-50 bg-nexus-bg-100 w-8 h-8 rounded-full m-2 hover:bg-red-500 transition-all"
-            onClick={(e) => UpForm(e, "false")}
-          >
-            X
-          </button>
-          <h1 className="text-center text-2xl text-nexus-txt-50 mb-5">
-            Upload File
-          </h1>
-          <label
-            htmlFor="fileUp"
-            className="btn pl-40 pr-40 bg-nexus-bg-200 hover:bg-nexus-primary-color hover:border-nexus-primary-color text-nexus-txt-50 border-none shadow-black/25 shadow-lg"
-          >
-            Choose File
-          </label>
-          <p className="mt-4 mb-40">{inputTitle}</p>
-          <input
-            type="file"
-            name="file"
-            id="fileUp"
-            // accept="application/json"
-            className="hidden"
-            onChange={(e) => ChooseFile(e, setInputTitle, inputTitle)}
-          />
-          <button
-            id="upload_button"
-            className="btn btn-outline border-nexus-txt-50 text-nexus-txt-50 hover:bg-nexus-primary-color hover:border-nexus-primary-color pl-20 pr-20 ml-20 mr-20 shadow-black/50 shadow-lg"
-            onClick={(e) => HandleUpload(e)}
-          >
-            Upload
-          </button>
-        </div>
+          <div>
+            <p className="text-nexus-txt-50 text-xl">Upload File</p>
+            <a className="text-xs text-nexus-txt-300">{`${ur}/${packFileName}/${fileName}.json`}</a>
+          </div>
+          <div>
+            <div>
+              <p>Choose File</p>
+              <label htmlFor="fileup" id="fileupbutton">
+                {fileTitle}
+              </label>
+              <input
+                type="file"
+                name="fileup"
+                id="fileup"
+                accept="application/json"
+                className="hidden"
+                onChange={(e) => {
+                  ChooseFile(e, e.target.files[0]);
+                }}
+              />
+            </div>
+            <div>
+              <p>Name</p>
+              <input
+                type="text"
+                name="namefile"
+                id="namefile"
+                onChange={(e) => {
+                  ChooseFileName(e, e.target.value);
+                }}
+              />
+            </div>
+            <div>
+              <p>Pack Name</p>
+              <input
+                type="text"
+                name="packnamefile"
+                id="packnamefile"
+                onChange={(e) => {
+                  ChoosePackFileName(e, e.target.value);
+                }}
+              />
+            </div>
+            <div>
+              <p>Description</p>
+              <textarea name="descriptionfile" id="descriptionfile"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Upload" />
+            </div>
+          </div>
+        </form>
       </div>
     </>
   );

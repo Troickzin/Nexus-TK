@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TestForm from "@/Components/TestForm";
+import Profile from "@/Components/Profile";
 import { signOut } from "next-auth/react";
 import DeslogarButton from "@/Components/DeslogarButton";
 
@@ -20,7 +21,7 @@ export default async function Home() {
         </div>
       </div>
       <div className="absolute top-0 left-0 w-screen h-screen flex items-center justify-center">
-        <h1 className="text-4xl max-md:text-2xl font-semibold text-nexus-txt-100 first-letter:text-nexus-primary-color absolute m-10 text-center top-10">
+        <h1 className="text-4xl max-md:text-2xl font-semibold text-nexus-txt-100 first-letter:text-nexus-primary-color absolute m-5 text-center top-0">
           Hospedando arquivos necessario para o <br />
           <span className="text-nexus-txt-50 text-5xl max-md:text-3xl">
             <span className="text-nexus-primary-color ">N</span>
@@ -73,9 +74,9 @@ export default async function Home() {
             </ul>
           </div>
         </div>
-        <DeslogarButton />
       </div>
-      {/* <TestForm></TestForm> */}
+      <DeslogarButton />
+      <Profile />
     </div>
   );
 }

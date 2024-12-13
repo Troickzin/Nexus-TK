@@ -1,12 +1,16 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Image from "next/image";
+import Profile from "@/Components/Profile";
+import TestForm from "@/Components/TestForm";
 
 export default async function page() {
   const session = await getServerSession();
 
-  if (!session) {
-    return redirect("/login");
+  const emailAcess = ["troickzin@gmail.com"];
+
+  if (!emailAcess.includes(session.user?.email)) {
+    return redirect("/");
   }
 
   return (
@@ -29,20 +33,10 @@ export default async function page() {
           <h1 className="text-4xl max-md:text-2xl font-semibold text-nexus-txt-100 first-letter:text-nexus-primary-color absolute m-5 text-center top-0">
             Upload Files
           </h1>
-
-          <div className="absolute w-screen h-screen grid items-center justify-center">
-            <form className="bg-red-900">
-              <div>
-                <label htmlFor="upfile">Choose File</label>
-                <input type="file" name="" id="upfile" className="hidden" />
-              </div>
-              <div></div>
-
-              <div></div>
-            </form>
-          </div>
         </div>
+        <TestForm />
       </div>
+      <Profile />
     </>
   );
 }

@@ -6,7 +6,7 @@ export default function page() {
   return (
     <>
       <div>
-        <button onClick={() => signIn("google", { callbackUrl: "/" })}>
+        <button onClick={(e) => signIn("google", { callbackUrl: "/" })}>
           Login com o google
         </button>
       </div>
