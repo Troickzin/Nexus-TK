@@ -1,9 +1,9 @@
 import Image from "next/image";
-import TestForm from "@/components/TestForm";
-import Profile from "@/components/Profile";
+import TestForm from "@/Components/TestForm";
+import Profile from "@/Components/Profile";
 import { signOut } from "next-auth/react";
-import DeslogarButton from "@/components/DeslogarButton";
-import FilesRouter from "@/components/FilesRouter";
+import DeslogarButton from "@/Components/DeslogarButton";
+import FilesRouter from "@/Components/FilesRouter";
 
 export default async function Home() {
   return (
