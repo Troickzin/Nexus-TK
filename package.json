@@ -11,6 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "aws-sdk": "^2.1692.0",
     "axios": "^1.7.9",
     "cookies-next": "^5.0.2",
     "dotenv": "^16.4.7",

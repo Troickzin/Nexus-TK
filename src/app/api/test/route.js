@@ -30,9 +30,8 @@ export async function POST(req) {
 
   const folderPath = path.join(
     process.cwd(),
-    "public",
-    "jsons",
     "Uploads",
+    "jsons",
     ownerName,
     packname
   );
@@ -48,9 +47,8 @@ export async function POST(req) {
 
   const pathfilesave = path.join(
     process.cwd(),
-    "public",
-    "jsons",
     "Uploads",
+    "jsons",
     "Save.json"
   );
 
@@ -65,13 +63,7 @@ export async function POST(req) {
 }
 
 function saveJsonFile(req, pathfile, name, owner, packname, description) {
-  const savePath = path.join(
-    process.cwd(),
-    "public",
-    "jsons",
-    "Uploads",
-    "Save.json"
-  );
+  const savePath = path.join(process.cwd(), "Uploads", "jsons", "Save.json");
 
   let data = [];
 
@@ -82,7 +74,7 @@ function saveJsonFile(req, pathfile, name, owner, packname, description) {
     data = JSON.parse(existingData);
   }
 
-  const fileUrl = `${req.nextUrl.origin}/jsons/Uploads/${owner}/${packname}/${name}.json`;
+  const fileUrl = `${req.nextUrl.origin}/jsons/${owner}/${packname}/${name}.json`;
   // Adiciona os novos dados ao array
   data.push({
     fileUrl: fileUrl,

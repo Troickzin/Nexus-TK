@@ -1,22 +1,26 @@
 "use client";
+
+// Importações necessárias
 import { Api } from "@/Services/Axios";
-import { faL } from "@fortawesome/free-solid-svg-icons";
 import { getSession } from "next-auth/react";
-import { getURL } from "next/dist/shared/lib/utils";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 
+// Função assíncrona para fazer upload dos arquivos
 async function uploadFiles(arquivo) {
   let formData = new FormData();
 
+  // Obtém a sessão do usuário
   const session = await getSession();
 
+  // Adiciona os dados do formulário ao FormData
   formData.append("file", arquivo.fileup.files[0]);
   formData.append("name", arquivo.namefile.value);
   formData.append("packname", arquivo.packnamefile.value);
   formData.append("description", arquivo.descriptionfile.value);
   formData.append("owner", JSON.stringify(session.user));
 
+  // Faz a requisição POST para enviar os dados
   Api.post("/api/test", formData, {
     headers: {
       "Content-Type": "multipart/form-data",
@@ -26,51 +30,60 @@ async function uploadFiles(arquivo) {
       console.log(res);
     })
     .catch((error) => {
-      console.log(`Erro: ${error.status} : ${error.response.data.error}`);
+      console.log(`Erro: ${error.status} : ${error}`);
     });
 }
 
+// Função para lidar com o evento de upload
 function HandleUpload(e) {
   const fileUp = document.getElementById("fileUp");
   e.preventDefault();
   uploadFiles(fileUp.files[0]);
 }
 
+// Função assíncrona para obter o nome do usuário
 async function setname() {
   const session = await getSession();
   return session.user.name;
 }
 
+// Componente principal do formulário de teste
 export default function TestForm() {
+  // Estados para armazenar os valores dos campos
   const [fileTitle, setFileTitle] = useState("File Name");
   const [userName, setUserName] = useState("username");
   const [fileName, setFileName] = useState("File");
   const [packFileName, setPackFileName] = useState("PackName");
 
+  // useEffect para definir o nome do usuário ao carregar o componente
   useEffect(() => {
     setname().then((res) => {
       setUserName(res);
     });
   }, []);
 
+  // URL para exibir o caminho do arquivo
   const ur = `${window.location.protocol}//${window.location.host}/Jsons/Uploads/${userName}`;
 
+  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.elements);
     uploadFiles(e.target.elements);
   };
 
+  // Função para escolher o arquivo e definir o título
   function ChooseFile(e, file) {
     const fileName = file.name;
-
     setFileTitle(fileName);
   }
 
+  // Função para definir o nome do arquivo
   function ChooseFileName(e, name) {
     setFileName(name);
   }
 
+  // Função para definir o nome do pacote do arquivo
   function ChoosePackFileName(e, name) {
     setPackFileName(name);
   }
