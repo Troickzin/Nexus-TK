@@ -1,16 +1,15 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { url } from "inspector";
-import { NextURL } from "next/dist/server/web/next-url";
-export async function POST(req) {
-  const Formdata = await req.formData();
 
-  const file = Formdata.get("file");
-  const name = Formdata.get("name");
-  const packname = Formdata.get("packname");
-  const description = Formdata.get("description"); // um dia utilizo isso
-  const owner = Formdata.get("owner");
+export async function POST(req) {
+  const formData = await req.formData();
+
+  const file = formData.get("file");
+  const name = formData.get("name");
+  const packname = formData.get("packname");
+  const description = formData.get("description");
+  const owner = formData.get("owner");
 
   if (!file || !file.name) {
     return NextResponse.json({ error: "Arquivo não enviado" }, { status: 400 });
@@ -40,19 +39,12 @@ export async function POST(req) {
     recursive: true,
   });
 
-  const pathfile = path.join(folderPath, name + ".json");
+  const filePath = path.join(folderPath, name + ".json");
 
-  fs.writeFileSync(pathfile, buffer);
-  console.log(`open ${pathfile} to see the uploaded file`);
+  fs.writeFileSync(filePath, buffer);
+  console.log(`open ${filePath} to see the uploaded file`);
 
-  const pathfilesave = path.join(
-    process.cwd(),
-    "Uploads",
-    "jsons",
-    "Save.json"
-  );
-
-  saveJsonFile(req, pathfile, name, ownerName, packname, description);
+  saveJsonFile(req, filePath, name, ownerName, packname, description);
 
   return NextResponse.json(
     {
@@ -62,7 +54,7 @@ export async function POST(req) {
   );
 }
 
-function saveJsonFile(req, pathfile, name, owner, packname, description) {
+function saveJsonFile(req, filePath, name, owner, packname, description) {
   const savePath = path.join(process.cwd(), "Uploads", "jsons", "Save.json");
 
   let data = [];

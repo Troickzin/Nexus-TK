@@ -4,6 +4,7 @@ import Profile from "@/Components/Profile";
 import { signOut } from "next-auth/react";
 import DeslogarButton from "@/Components/DeslogarButton";
 import FilesRouter from "@/Components/FilesRouter";
+import Overlay from "@/Components/Overlay";
 
 export default async function Home() {
   return (
@@ -35,6 +36,7 @@ export default async function Home() {
       <FilesRouter />
       <DeslogarButton />
       <Profile />
+      <Overlay />
     </div>
   );
 }
