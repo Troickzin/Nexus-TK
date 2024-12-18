@@ -1,13 +1,18 @@
-import { Nexus_TK } from "./Icons/Nexus_TK";
+import icons from "./Icons";
 export default function Mini_Logo(props) {
   return (
     <>
-      <div className={props.TitleFix ? "fixed" : "absolute"}>
-        <div className="absolute ml-[50px] mt-[40px] flex items-center">
-          <Nexus_TK className="text-nexus-txt-50 size-[34px]" />
-          <p className="text-[20px] font-semibold pl-[20px] text-nexus-txt-50 first-letter:text-nexus-primary-color min-w-36">
-            NEXUS <span className="text-nexus-primary-color">T</span>K
-          </p>
+      <div
+        className={
+          props.TitleFix ? "fixed top-0 left-0" : "absolute top-0 left-0"
+        }
+      >
+        <div className="absolute ml-[70px] mt-[40px] flex items-center">
+          <icons.Nexus_TK
+            className="size-[38px]"
+            color2="fill-nexus-primary-color"
+            color1="fill-nexus-txt-50"
+          />
         </div>
       </div>
     </>

@@ -46,13 +46,13 @@ export default function Footer() {
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
-                  className="text-nexus-eft-500"
+                  className="text-nexus-primary-color"
                   d="M36.216 99.3262H61.6353L116.903 128.265V99.3262H131.666L172.723 152.084L128.598 206.014H116.903V159.432L65.0285 132.429V206.014H36.216V99.3262ZM45.216 108.326V197.014H56.0285V117.598L125.903 153.97V195.095L161.209 151.943L127.266 108.326H125.903V143.137L59.4216 108.326H45.216Z"
                 />
               </svg>
             </div>
             <div className="lg:ml-auto lg:mr-auto max-lg:mt-10 relative pl-2 pr-2">
-              <p className="font-bold text-[20px] first-letter:text-nexus-eft-500">
+              <p className="font-bold text-[20px] first-letter:text-nexus-primary-color">
                 Contatos
               </p>
               <ul className="list-disc ml-5 lg:ml-10 mt-5">
@@ -71,7 +71,7 @@ export default function Footer() {
             </div>
 
             <div className="lg:ml-auto lg:mr-auto max-lg:mt-10 relative pl-2 pr-2">
-              <p className="font-bold text-[20px] first-letter:text-nexus-eft-500">
+              <p className="font-bold text-[20px] first-letter:text-nexus-primary-color">
                 Navegação
               </p>
               <ul className="list-disc ml-5 lg:ml-10 mt-5">
@@ -83,7 +83,7 @@ export default function Footer() {
             </div>
 
             <div className="lg:ml-auto lg:mr-auto max-lg:mt-10 relative pl-2 pr-2">
-              <p className="font-bold text-[20px] first-letter:text-nexus-eft-500">
+              <p className="font-bold text-[20px] first-letter:text-nexus-primary-color">
                 Dependências que serão usadas
               </p>
               <ul className="list-disc ml-5 lg:ml-10 mt-5">
@@ -156,13 +156,13 @@ export default function Footer() {
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
-                  className="text-nexus-eft-500"
+                  className="text-nexus-primary-color"
                   d="M36.216 99.3262H61.6353L116.903 128.265V99.3262H131.666L172.723 152.084L128.598 206.014H116.903V159.432L65.0285 132.429V206.014H36.216V99.3262ZM45.216 108.326V197.014H56.0285V117.598L125.903 153.97V195.095L161.209 151.943L127.266 108.326H125.903V143.137L59.4216 108.326H45.216Z"
                 />
               </svg>
             </div>
           </div>
-          <p className="m-auto first-letter:text-nexus-eft-500">
+          <p className="m-auto first-letter:text-nexus-primary-color">
             Desenvovido por: Troick
           </p>
         </div>

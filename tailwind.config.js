@@ -67,7 +67,8 @@ module.exports = {
       },
       boxShadow: {
         shadownex: "0px 0px 30px 0px #0b0b0bb0",
-        "shadow-nexus-s10": "0px 0px 15px 0px rgba(0, 0, 0, 0.5)",
+        "nexus-s10": "0px 0px 10px 0px rgba(0, 0, 0, 0.5)",
+        "nexus-s15": "0px 0px 15px 0px rgba(0, 0, 0, 0.5)",
       },
       animation: {
         newsping: "newsping 2s cubic-bezier(0, 0, 0.2, 1) infinite",

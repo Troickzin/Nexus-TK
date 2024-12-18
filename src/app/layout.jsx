@@ -4,6 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
 import "./globals.css";
+import Background from "@/Containers/Background";
 
 export const metadata = {
   title: "Nexus TK",
@@ -20,7 +21,10 @@ export default function RootLayout({ children }) {
           async
         ></script>
       </head>
-      <body className="bg-nexus-bg-500 font-alexandria">{children}</body>
+      <body className="bg-nexus-bg-500 font-alexandria">
+        <Background />
+        <div className="absolute z-10 ">{children}</div>
+      </body>
     </html>
   );
 }
