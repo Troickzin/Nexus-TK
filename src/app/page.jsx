@@ -24,7 +24,7 @@ export default async function Home() {
           </p>
           <div className="flex gap-1 justify-center items-center">
             <div className="h-[2px] w-1/2 rounded-sm bg-gradient-to-l from-nexus-white-50"></div>
-            <div className="size-[6px] rounded-[1px] bg-nexus-eft-300 rotate-45"></div>
+            <div className="size-[6px] rounded-[1px] bg-nexus-green-300 rotate-45"></div>
             <div className="h-[2px] w-1/2 rounded-sm bg-gradient-to-r from-nexus-white-50"></div>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function Navbar() {
         id="navbar"
       >
         <Link
-          href="#"
+          href="/mods"
           className="pl-[6px] pr-[6px] group-data-[small=false]/navbar:w-40 h-6 text-center rounded-full flex items-center justify-center gap-1 hover:bg-nexus-primary-color hover:text-nexus-dark-400 transition-all hover:scale-105 active:scale-90 active:bg-nexus-green-700 group/button"
           style={{ interpolateSize: "allow-keywords" }}
         >
@@ -57,7 +57,7 @@ export default function Navbar() {
           </div>
         </Link>
         <Link
-          href="#"
+          href="/projects"
           className="pl-[6px] pr-[6px] group-data-[small=false]/navbar:w-40 h-6 text-center rounded-full flex items-center justify-center gap-1 hover:bg-nexus-primary-color hover:text-nexus-dark-400 transition-all hover:scale-105 active:scale-90 active:bg-nexus-green-700 group/button"
           style={{ interpolateSize: "allow-keywords" }}
         >
@@ -90,7 +90,7 @@ export default function Navbar() {
           </div>
         </Link>
         <Link
-          href="/hub#test"
+          href="/servers"
           className="pl-[6px] pr-[6px] group-data-[small=false]/navbar:w-40 h-6 text-center rounded-full flex items-center justify-center gap-1 hover:bg-nexus-primary-color hover:text-nexus-dark-400 transition-all hover:scale-105 active:scale-90 active:bg-nexus-green-700 group/button"
           style={{ interpolateSize: "allow-keywords" }}
         >
