@@ -11,7 +11,7 @@ export default function Mini_Logo(props) {
           <icons.Nexus_TK
             className="size-[38px]"
             color2="fill-nexus-primary-color"
-            color1="fill-nexus-txt-50"
+            color1="fill-nexus-white-50"
           />
         </div>
       </div>

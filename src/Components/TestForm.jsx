@@ -93,11 +93,11 @@ export default function TestForm() {
       <div className="grid h-screen items-center justify-center absolute top-0 left-0 ml-20">
         <form
           onSubmit={handleSubmit}
-          className="bg-nexus-bg-300 text-nexus-txt-100 font-normal"
+          className="bg-nexus-dark-300 text-nexus-white-100 font-normal"
         >
           <div>
-            <p className="text-nexus-txt-50 text-xl">Upload File</p>
-            <a className="text-xs text-nexus-txt-300">{`${ur}/${packFileName}/${fileName}.json`}</a>
+            <p className="text-nexus-white-50 text-xl">Upload File</p>
+            <a className="text-xs text-nexus-white-300">{`${ur}/${packFileName}/${fileName}.json`}</a>
           </div>
           <div>
             <div>

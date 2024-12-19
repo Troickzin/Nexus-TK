@@ -21,9 +21,17 @@ export default function RootLayout({ children }) {
           async
         ></script>
       </head>
-      <body className="bg-nexus-bg-500 font-alexandria">
-        <Background />
-        <div className="absolute z-10 ">{children}</div>
+      <body className="bg-nexus-dark-500 font-alexandria">
+        <div
+          className="relative z-10"
+          style={{
+            backgroundImage: "url('/images/grid_effect.png')",
+            backgroundRepeat: "repeat",
+            backgroundPosition: "10pix",
+          }}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );

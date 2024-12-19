@@ -22,7 +22,9 @@ module.exports = {
         nexus: {
           "primary-color": "#16A98B",
           "secundary-color": "#9747FF",
-          bg: {
+          error: "#74262B",
+          sucess: "#35765E",
+          dark: {
             50: "#262626",
             100: "#202020",
             200: "#1B1B1B",
@@ -31,7 +33,7 @@ module.exports = {
             500: "#0F0F0F",
             600: "#0C0C0C",
           },
-          txt: {
+          white: {
             50: "#BDC3D4",
             100: "#9CA1B0",
             200: "#7F8494",
@@ -39,11 +41,8 @@ module.exports = {
             400: "#5A5E68",
             500: "#3A3C43",
             600: "#333844",
-
-            error: "#74262B",
-            sucess: "#35765E",
           },
-          eft: {
+          green: {
             50: "#F0FDF9",
             100: "#CDFAEC",
             200: "#9BF4DB",
@@ -67,6 +66,7 @@ module.exports = {
       },
       boxShadow: {
         shadownex: "0px 0px 30px 0px #0b0b0bb0",
+        "nexus-s5": "0px 0px 5px 0px rgba(0, 0, 0, 0.5)",
         "nexus-s10": "0px 0px 10px 0px rgba(0, 0, 0, 0.5)",
         "nexus-s15": "0px 0px 15px 0px rgba(0, 0, 0, 0.5)",
       },
