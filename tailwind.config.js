@@ -72,13 +72,21 @@ module.exports = {
       },
       animation: {
         newsping: "newsping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
+        newsbigping: "big_new_sping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
         sobd: "sobedesce 60s ease infinite",
         dess: "descesobe 60s ease infinite",
+        item_showcase: "item_showcase 6s ease infinite",
       },
       keyframes: {
         newsping: {
           "75%, 100%": {
             transform: "scale(1.25)",
+            opacity: "0",
+          },
+        },
+        big_new_sping: {
+          "75%, 100%": {
+            transform: "scale(1.75)",
             opacity: "0",
           },
         },
@@ -90,12 +98,15 @@ module.exports = {
           "0%, 100%": { transform: "translateY(20%)" },
           "50%": { transform: "translateY(0%)" },
         },
+        item_showcase: {
+          "0%, 100%": { transform: "translateY(-2%)" },
+          "50%": { transform: "translateY(0%)" },
+        },
       },
       screens: {
         "2sm": "820px",
       },
     },
   },
-  plugins: [require("daisyui")],
-  daisyui: {},
+  plugins: [],
 };

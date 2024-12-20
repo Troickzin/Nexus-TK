@@ -4,7 +4,7 @@ import Profile from "@/Components/Float/Menu/Profile";
 import { signOut } from "next-auth/react";
 import DeslogarButton from "@/Components/DeslogarButton";
 import FilesRouter from "@/Components/FilesRouter";
-import Overlay from "@/Components/Overlay";
+import Overlay from "@/Components/Overlay/Overlay";
 import Background from "@/Containers/Background";
 import Float_Menu from "@/Components/Float/Menu/Float_Menu";
 

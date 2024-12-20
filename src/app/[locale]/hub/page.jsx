@@ -1,6 +1,6 @@
 import Float_Menu from "@/Components/Float/Menu/Float_Menu";
 import Navbar from "@/Components/Float/Navbar/Navbar";
-import Overlay from "@/Components/Overlay";
+import Overlay from "@/Components/Overlay/Overlay";
 import Image from "next/image";
 
 export const metadata = {
@@ -32,7 +32,7 @@ export default async function Hub() {
         ></div>
       </div>
       <Navbar />
-      <Float_Menu />
+      {/* <Float_Menu /> */}
       <Overlay TitleFix="true" />
     </>
   );

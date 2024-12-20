@@ -1,26 +1,24 @@
 const { NextResponse, NextRequest } = require("next/server");
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
 
-export default function middleware(req) {
-  // const isDev = req.cookies.get("user_token")?.value;
-  // const aboutRoute = new URL("/about", req.url);
+export default createMiddleware(routing);
 
-  // console.log(isDev);
+export const config = {
+  matcher: ["/", "/(pt|en|fr)/:path*"],
+};
 
-  // if (isDev == "Dev") {
-  //   return NextResponse.next();
-  // }
+// export default function middleware(req) {
+//   const isDev = req.cookies.get("user_token")?.value;
+//   const aboutRoute = new URL("/about", req.url);
 
-  // return NextResponse.redirect(aboutRoute);
+//   console.log(isDev);
 
-  return NextResponse.next();
-}
+//   if (isDev == "Dev") {
+//     return NextResponse.next();
+//   }
 
-// export const config = {
-//   matcher: [
-//     "/",
-//     "/login/:path*",
-//     "/register/:path*",
-//     "/help/:path*",
-//     "/hub/:path*",
-//   ],
-// };
+//   return NextResponse.redirect(aboutRoute);
+
+//   return NextResponse.next();
+// }

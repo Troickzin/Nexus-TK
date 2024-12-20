@@ -1,0 +1,32 @@
+{
+  "HomePage": {
+    "welcome": "Bem-Vindo ao",
+    "description": "Um ecossistema para servidores Apocalípticos de Minecraft"
+  },
+
+  "Buttons": {
+    "Navbar": {
+      "mods_packs": "Mods / Packs",
+      "projects": "Projetos",
+      "hub": "HUB",
+      "servers": "Servidores"
+    },
+    "Float_Menu": {
+      "user": "Usuario",
+      "groups": "Grupos",
+      "friends": "Amigos",
+      "language": "Linguagem",
+      "logout": "Desconectar",
+      "login": "Conectar"
+    },
+    "HomePage": {
+      "hub": "HUB",
+      "about": "Sobre"
+    }
+  },
+
+  "LoadingPage": {
+    "loading": "Carregando",
+    "building": "Em Desenvolvimento"
+  }
+}
