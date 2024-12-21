@@ -32,7 +32,7 @@ export default async function Hub() {
         ></div>
       </div>
       <Navbar />
-      {/* <Float_Menu /> */}
+      <Float_Menu />
       <Overlay TitleFix="true" />
     </>
   );
