@@ -45,7 +45,7 @@ export default function PMenu(props) {
         onClick={(e) => {
           router.push(pathname, { locale: language });
         }}
-        className="hover:bg-nexus-primary-color group-even:hover:bg-nexus-green-700 group-even:text-nexus-white-500 text-nowrap
+        className="hover:bg-nexus-primary-color group-even:hover:bg-nexus-green-700 group-even:text-nexus-white-450 text-nowrap
 justify-end flex pl-10 transition-all
 hover:text-nexus-dark-400 active:scale-95 active:bg-nexus-green-800 hover:scale-[1.02] items-center gap-2 pr-2 rounded-md cursor-pointer
 relative"
@@ -122,7 +122,7 @@ relative
                   </summary>
                   <div className="relative pt-2">
                     <div className="absolute h-[90%] w-px bg-gradient-to-t from-transparent via-nexus-white-400 to-transparent right-0 mr-1 top-1/2 translate-y-[-50%]"></div>
-                    <ul className="max-h-28 overflow-y-auto scroll-ml-0 customscrollbar snap-y">
+                    <ul className="max-h-60 overflow-y-auto scroll-ml-0 customscrollbar snap-y">
                       {languageOptions}
                     </ul>
                   </div>
@@ -139,9 +139,9 @@ relative
             <>
               <li
                 className="relative language before:content-[''] before:bg-gradient-to-r before:from-transparent before:via-nexus-white-400 before:to-transparent 
-            before:h-px before:w-full 
-            before:absolute 
-            before:bottom-0"
+          before:h-px before:w-full 
+          before:absolute 
+          before:bottom-0"
               >
                 <details className="group/detail">
                   <summary className="block group">
@@ -159,8 +159,10 @@ relative
                     </a>
                   </summary>
                   <div className="relative pt-2">
-                    <div className="absolute h-full w-px bg-gradient-to-t from-transparent via-nexus-white-400 to-transparent right-0 mr-4"></div>
-                    <ul>{languageOptions}</ul>
+                    <div className="absolute h-[90%] w-px bg-gradient-to-t from-transparent via-nexus-white-400 to-transparent right-0 mr-1 top-1/2 translate-y-[-50%]"></div>
+                    <ul className="max-h-60 overflow-y-auto scroll-ml-0 customscrollbar snap-y">
+                      {languageOptions}
+                    </ul>
                   </div>
                 </details>
               </li>

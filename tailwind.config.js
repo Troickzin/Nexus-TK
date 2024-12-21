@@ -22,8 +22,14 @@ module.exports = {
         nexus: {
           "primary-color": "#16A98B",
           "secundary-color": "#9747FF",
+          "tertiary-color": "#C432D1",
           error: "#74262B",
           sucess: "#35765E",
+          warning: "#C8D147",
+
+          notification_error: "#A4000A",
+          notification_sucess: "#00FFA1",
+          notification_warning: "#EEFF00",
           dark: {
             50: "#262626",
             100: "#202020",
@@ -39,6 +45,7 @@ module.exports = {
             200: "#7F8494",
             300: "#7B7F8C",
             400: "#5A5E68",
+            450: "#43464E",
             500: "#3A3C43",
             600: "#333844",
           },

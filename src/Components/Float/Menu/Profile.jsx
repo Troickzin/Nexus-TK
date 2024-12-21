@@ -5,6 +5,9 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import PMenu from "./Profile/PMenu";
+import { MdQuestionMark } from "react-icons/md";
+import { CiImageOn } from "react-icons/ci";
+import { HiUser } from "react-icons/hi2";
 
 export default function Profile() {
   const pathname = usePathname();
@@ -35,7 +38,9 @@ export default function Profile() {
             />
           ) : (
             <>
-              <div className="rounded-full w-7 h-7 outline-nexus-white-200 outline outline-1 group-hover:outline-nexus-white-50 group-active:outline-nexus-primary-color transition-all select-none group-open/details:outline-nexus-primary-color"></div>
+              <div className="rounded-full w-7 h-7 text-nexus-white-200 flex justify-center items-center outline-nexus-white-200 outline outline-1 group-active:outline-nexus-error group-active:text-nexus-error transition-all select-none group-open/details:outline-nexus-error group-open/details:text-nexus-error bg-gradient-to-t from-nexus-dark-100">
+                <HiUser />
+              </div>
             </>
           )}
         </summary>
