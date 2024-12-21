@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <div className="w-screen h-screen overflow-hidden">
-        <div className="grid ml-[75px] mt-[160px] w-fit">
+        <div className="grid ml-[75px] mt-[160px] w-fit relative z-10">
           <p className="text-nexus-white-100 text-4xl">{t("welcome")}</p>
           <p className="text-nexus-white-50 text-8xl mt-[-10px] mb-[-10px] font-bold">
             <span className="text-nexus-primary-color">N</span>EXUS{" "}
@@ -43,7 +43,7 @@ export default function Home() {
 
         <div className="absolute ml-24 mb-36 left-0 bottom-0 flex justify-start items-center gap-5 z-20">
           <Link
-            href={"/hub#test"}
+            href={"/hub"}
             className="text-xl font-bold text-nexus-dark-300 rounded-lg bg-nexus-primary-color pl-12 pr-12 pt-1 pb-1 hover:scale-110 transition-all shadow-nexus-s10"
           >
             {ButtonsTranslate("HomePage.hub")}

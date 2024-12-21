@@ -15,7 +15,7 @@ export default async function Random_Image() {
 
   return (
     <>
-      <div className="relative w-[1133px] h-[892px]">
+      <div className="relative w-[1133px] h-[892px] z-0">
         <img
           src="/images/showcase_items/shadow.png"
           alt=""

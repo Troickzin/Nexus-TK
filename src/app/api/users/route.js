@@ -24,15 +24,21 @@ export async function GET(req) {
 
 export async function POST(req) {
   await connectDB();
-  const { name, email, password } = await req.json();
+  const { name, email, password, username, profile, tag } = await req.json();
 
-  console.log(name, email, password);
+  console.log(name, email, username, profile, tag);
 
   try {
     const existingUser = await User.findOne({ email });
+    const existingUsername = await User.findOne({ username });
     if (existingUser) {
       return NextResponse.json(
         { message: "Email already registered" },
+        { status: 400 }
+      );
+    } else if (existingUsername) {
+      return NextResponse.json(
+        { message: "Username already registered" },
         { status: 400 }
       );
     }
@@ -40,9 +46,19 @@ export async function POST(req) {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    let user = new User({ name, email, password: hashedPassword });
+    let user = new User({
+      name,
+      email,
+      profile,
+      username,
+      tag,
+      password: hashedPassword,
+    });
     await user.save();
-    return NextResponse.json({ message: "User registered" }, { status: 201 });
+    return NextResponse.json(
+      { message: `User ${name} registered` },
+      { status: 201 }
+    );
   } catch (err) {
     console.error(err.message);
     return NextResponse.json({ message: "Server Error" }, { status: 500 });
