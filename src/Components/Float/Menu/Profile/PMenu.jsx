@@ -16,6 +16,7 @@ export default function PMenu() {
   const pathname = usePathname();
   const [session, setSession] = useState(null);
   const [language, setLanguage] = useState("");
+  const username = session?.user?.name || ButtonsTranslate("Float_Menu.user");
 
   useEffect(() => {
     function getLanguageFromUrl() {
@@ -32,7 +33,7 @@ export default function PMenu() {
       setSession(sessionData);
     }
     fetchSession();
-  });
+  }, []);
 
   const languageOptions = Configs.languages.map((language, index) => (
     <li className="relative pb-2" key={language}>
@@ -58,10 +59,10 @@ export default function PMenu() {
             <>
               <li className="relative pb-2 w-full">
                 <Link
-                  href={`/profile/${session.user.name}`}
+                  href={`/profile/${username}`}
                   className="hover:bg-nexus-primary-color hover:text-nexus-dark-400 active:scale-95 active:bg-nexus-green-800 hover:scale-[1.02] transition-all flex justify-end items-center gap-2 pr-2 pl-40 rounded-md cursor-pointer"
                 >
-                  {session.user.name || ButtonsTranslate("Float_Menu.user")}
+                  {username}
                   <LuUserRound />
                 </Link>
                 <div className="after:content-[''] after:bg-gradient-to-r after:from-transparent after:via-nexus-white-400 after:to-transparent after:h-px after:w-full after:absolute after:bottom-0"></div>
